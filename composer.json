@@ -1,0 +1,41 @@
+{
+    "name": "persian-tools/php-persian-tools",
+    "description": "An anthology of a variety of tools for Persian language in PHP.",
+    "keywords": [
+        "persian-tools",
+        "php-persian-tools"
+    ],
+    "homepage": "https://github.com/persian-tools/php-persian-tools",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Ali Torki",
+            "email": "ali_4286@live.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7",
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PersianTools\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PersianTools\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true,
+        "bin-compat": "full"
+    }
+}

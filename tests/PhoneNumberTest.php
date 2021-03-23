@@ -25,7 +25,6 @@ class PhoneNumberTest extends TestCase
     public function testPhoneNumberValidator()
     {
 
-        print_r(PersianTools::phoneNumberValidator('09022002580'));
         $this->assertTrue(PersianTools::phoneNumberValidator('09022002580'));
         $this->assertTrue(PersianTools::phoneNumberValidator('09122002580'));
         $this->assertTrue(PersianTools::phoneNumberValidator('09322002580'));

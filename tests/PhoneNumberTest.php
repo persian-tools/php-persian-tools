@@ -38,4 +38,14 @@ class PhoneNumberTest extends TestCase
 
         $this->assertFalse(PersianTools::phoneNumberValidator('09802002580'));
     }
+
+    public function testPhoneNumberDetail()
+    {
+        $this->assertEquals([
+            'base' => "کشوری",
+            'province'=> [],
+            'operator' => "ایرانسل",
+            'type' => ["permanent", "credit"],
+        ],PersianTools::phoneNumberDetail('09022002580'));
+    }
 }

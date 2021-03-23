@@ -234,13 +234,12 @@ trait PhoneNumber
     }
 
     public static function operators(){
-        return [
-            self::$MCI,
-            self::$Taliya,
-            self::$Irancell,
-            self::$ShatelMobile,
-            self::$RightTel,
-        ];
+        return
+            self::$MCI +
+            self::$Taliya +
+            self::$Irancell +
+            self::$ShatelMobile +
+            self::$RightTel;
     }
 
     /**
@@ -269,7 +268,11 @@ trait PhoneNumber
      */
     static public function phoneNumberDetail(string $mobile)
     {
-        $prefix = self::getPhonePrefix($mobile);
-        return self::operators($prefix) ?? '';
+        if(self::phoneNumberValidator($mobile))
+        {
+            $prefix = self::getPhonePrefix($mobile);
+            return self::operators()[$prefix] ?? '';
+        }
+        return null;
     }
 }

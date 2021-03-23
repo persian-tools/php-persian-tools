@@ -5,7 +5,7 @@ namespace PersianTools\Traits;
 trait PhoneNumber
 {
 
-    public $MCI = [
+    public static $MCI = [
         "910" => [
             'base' => "کشوری",
             'province' => [],
@@ -98,7 +98,7 @@ trait PhoneNumber
         ],
     ];
 
-    public $Irancell = [
+    public static $Irancell = [
         "930" => [
             'province'=> [],
             'base'=> "کشوری",
@@ -181,7 +181,7 @@ trait PhoneNumber
         ]
     ];
 
-    public $ShatelMobile = [
+    public static $ShatelMobile = [
         "998" => [
             'province' => [],
             'base' => "کشوری",
@@ -190,7 +190,7 @@ trait PhoneNumber
         ]
     ];
 
-    public $Taliya = [
+    public static $Taliya = [
         "932" => [
             'province' => [],
             'base' => "کشوری",
@@ -199,7 +199,7 @@ trait PhoneNumber
         ],
     ];
 
-    public $RightTel = [
+    public static $RightTel = [
         "920" => [
             'province' => [],
             'base' => "کشوری",
@@ -222,23 +222,24 @@ trait PhoneNumber
 
     public static $mobileRegex = '/^(?:[+|0{2}]?98)?(?:0)?(\d{3})+(\d{3})+(\d{4})$/';
 
-    public function prefixes(){
-        return [
-            array_keys($this->MCI),
-            array_keys($this->Taliya),
-            array_keys($this->RightTel),
-            array_keys($this->Irancell),
-            array_keys($this->ShatelMobile),
-        ];
+    public static function prefixes(){
+        return array_keys(
+            self::$MCI +
+            self::$Taliya +
+            self::$RightTel +
+            self::$Irancell +
+            self::$ShatelMobile
+        );
+
     }
 
-    public function operators(){
+    public static function operators(){
         return [
-            $this->MCI,
-            $this->Taliya,
-            $this->Irancell,
-            $this->ShatelMobile,
-            $this->RightTel,
+            self::$MCI,
+            self::$Taliya,
+            self::$Irancell,
+            self::$ShatelMobile,
+            self::$RightTel,
         ];
     }
 
@@ -251,5 +252,24 @@ trait PhoneNumber
         $matches = [];
         preg_match(static::$mobileRegex,$mobile,$matches);
         return $matches[1] ?? '';
+    }
+
+    /**
+     * @param  string $mobile
+     * @return string
+     */
+    static public function phoneNumberValidator(string $mobile)
+    {
+        return preg_match(static::$mobileRegex,$mobile) && in_array(self::getPhonePrefix($mobile),self::prefixes());
+    }
+
+    /**
+     * @param  string $mobile
+     * @return string
+     */
+    static public function phoneNumberDetail(string $mobile)
+    {
+        $prefix = self::getPhonePrefix($mobile);
+        return self::operators($prefix) ?? '';
     }
 }

@@ -8,6 +8,7 @@ use PersianTools\Traits\URLfix;
 use PersianTools\Traits\Commas;
 use PersianTools\Traits\NationalId;
 use PersianTools\Traits\PhoneNumber;
+use PersianTools\Traits\VerifyCardNumber;
 
 class PersianTools
 {
@@ -16,5 +17,6 @@ class PersianTools
         URLfix,
         Commas,
         PhoneNumber,
-        NationalId;
+        NationalId,
+        VerifyCardNumber;
 }

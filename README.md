@@ -19,20 +19,20 @@
 
 ## Features
 
-- [x] [Adding ordinal suffixes]
+- [x] Adding ordinal suffixes
 - [x] Converting Persian words to number
 - [x] Converting Persian numbers to word
 - [x] Adding and removing separator to/from numbers
-- [ ] [Converting Persian numbers to Arabic / English numbers and reverse]
-- [ ] [Checking a string has/is Persian]
-- [x] [Validating Iranians national id]
+- [ ] Converting Persian numbers to Arabic / English numbers and reverse
+- [ ] Checking a string has/is Persian
+- [x] Validating Iranians national id
 - [ ] Finding city and province names by national id
-- [ ] [Calculating bills]
+- [ ] Calculating bills
 - [ ] Checking IBAN of the bank account (_SHEBA_)
-- [x] [Validating ATM card number]
+- [x] Validating ATM card number
 - [x] Finding name of banks by ATM card number
 - [ ] Getting information from vehicle plate
-- [x] [Fixing and decoding URLs with whitespace]
+- [x] Fixing and decoding URLs with whitespace
 
 
 

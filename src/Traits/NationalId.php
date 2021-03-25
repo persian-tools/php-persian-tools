@@ -7,7 +7,7 @@ trait NationalId
     /**
      * verify Iranian national ID
      * Credit : Alireza Nasseh
-     * @param  $url
+     * @param  string $code
      * @return bool
      */
     static public function verifyIranianNationalId(string $code)

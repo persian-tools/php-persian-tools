@@ -23,9 +23,8 @@ trait NationalId
         $zeroFill = 10 - $codeLength;
         $code = str_repeat('0', $zeroFill) . $code;
 
-        // National ID digits can not be the same (ex. 1111111111 or 9999999999 ...)
-        for ($i = 0; $i < 10; $i++)
-            if ($code == str_repeat($i, 10)) return false;
+        if($code == '0000000000')
+            return false;
 
         // Calculating the check digit
         for ($pos = 10, $index = 0, $sum = 0; $pos > 1; $pos--, $index++) {

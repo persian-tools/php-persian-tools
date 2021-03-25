@@ -3,7 +3,6 @@
 		<img src="./images/logo.png" width="200" />
 	</p>
 	<h1 align="center">Persian Tools PHP</h1>
-	<h2 align="center">[Work In Progress]</h2>
 	<p align="center">PersianTools PHP is a standalone, library-agnostic PHP Library that enables some of the Persian features for use in the PHP.</p>
 
 [![Latest Stable Version](https://poser.pugx.org/persian-tools/php-persian-tools/v/stable)](https://packagist.org/packages/persian-tools/php-persian-tools)

@@ -193,9 +193,9 @@ trait GetBankNameFromCardNumber
      * get bank name from card number
      *
      * @param  string  $digits
-     * @return string
+     * @return string|null
      */
-    static public function getBankNameFromCardNumber(string $digits)
+    public static function getBankNameFromCardNumber(string $digits)
     {
         if (!$digits) return;
 

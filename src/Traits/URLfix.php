@@ -10,7 +10,7 @@ trait URLfix
      * @param  string  $url
      * @return string
      */
-    static public function URLfix(string $url)
+    public static function URLfix(string $url)
     {
         return urldecode($url);
     }

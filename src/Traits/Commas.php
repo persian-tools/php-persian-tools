@@ -10,7 +10,7 @@ trait Commas
      * @param  $number
      * @return string
      */
-    static public function addCommas($number)
+    public static function addCommas($number)
     {
         // todo : parameter must be numeric
         $floatNumber = floatval(str_replace(',', '', $number));
@@ -23,7 +23,7 @@ trait Commas
     * @param  $number
     * @return string
     */
-    static public function removeCommas($number)
+    public static function removeCommas($number)
     {
         // todo : parameter must be numeric
         return !empty($number) ? str_replace(',', '', $number) : '';

@@ -13,16 +13,14 @@ trait WordsToNumber
      * @param string $digits
      * @param boolean $shouldAddCommas
      * @param boolean $isFuzzyEnabled
-     * @return Converted words to number. e.g: 350000
+     * @return null|string words to number. e.g: 350000
      */
-    static public function wordsToNumber(string $words, string $digits = 'en', bool $shouldAddCommas = false, bool $isFuzzyEnabled = false)
+    public static function wordsToNumber(string $words, string $digits = 'en', bool $shouldAddCommas = false, bool $isFuzzyEnabled = false)
     {
         if (empty($words)) {
             return null;
         }
 
-        $words = static::removeOrdinalSuffix($words);
-
-        return $words;
+        return static::removeOrdinalSuffix($words);
     }
 }

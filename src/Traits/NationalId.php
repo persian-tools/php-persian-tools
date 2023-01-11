@@ -10,7 +10,7 @@ trait NationalId
      * @param  string $code
      * @return bool
      */
-    static public function verifyIranianNationalId(string $code)
+    public static function verifyIranianNationalId(string $code)
     {
 
         if(!preg_match('/^\d{10}$/',$code))

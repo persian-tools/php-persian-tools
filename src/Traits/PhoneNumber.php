@@ -246,7 +246,7 @@ trait PhoneNumber
      * @param  string $mobile
      * @return string
      */
-    static public function getPhonePrefix(string $mobile)
+    public static function getPhonePrefix(string $mobile)
     {
         $matches = [];
         preg_match(static::$mobileRegex,$mobile,$matches);
@@ -255,18 +255,18 @@ trait PhoneNumber
 
     /**
      * @param  string $mobile
-     * @return string
+     * @return bool
      */
-    static public function phoneNumberValidator(string $mobile)
+    public static function phoneNumberValidator(string $mobile)
     {
         return preg_match(static::$mobileRegex,$mobile) && in_array(self::getPhonePrefix($mobile),self::prefixes());
     }
 
     /**
      * @param  string $mobile
-     * @return string
+     * @return string|array|null
      */
-    static public function phoneNumberDetail(string $mobile)
+    public static function phoneNumberDetail(string $mobile)
     {
         if(self::phoneNumberValidator($mobile))
         {

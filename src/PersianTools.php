@@ -2,14 +2,15 @@
 
 namespace PersianTools;
 
-use PersianTools\Traits\RemoveOrdinalSuffix;
-use PersianTools\Traits\WordsToNumber;
-use PersianTools\Traits\URLfix;
 use PersianTools\Traits\Commas;
-use PersianTools\Traits\GetBankNameFromCardNumber;
+use PersianTools\Traits\URLfix;
 use PersianTools\Traits\NationalId;
 use PersianTools\Traits\PhoneNumber;
+use PersianTools\Traits\WordsToNumber;
+use PersianTools\Traits\ConvertNumbers;
 use PersianTools\Traits\VerifyCardNumber;
+use PersianTools\Traits\RemoveOrdinalSuffix;
+use PersianTools\Traits\GetBankNameFromCardNumber;
 
 class PersianTools
 {
@@ -20,5 +21,6 @@ class PersianTools
         PhoneNumber,
         NationalId,
         VerifyCardNumber,
-        GetBankNameFromCardNumber;
+        GetBankNameFromCardNumber,
+        ConvertNumbers;
 }

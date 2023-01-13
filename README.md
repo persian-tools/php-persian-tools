@@ -23,7 +23,7 @@
 - [x] Converting Persian words to number
 - [x] Converting Persian numbers to word
 - [x] Adding and removing separator to/from numbers
-- [ ] Converting Persian numbers to Arabic / English numbers and reverse
+- [x] Converting Persian numbers to Arabic / English numbers and reverse
 - [ ] Checking a string has/is Persian
 - [x] Validating Iranians national id
 - [ ] Finding city and province names by national id

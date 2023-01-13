@@ -10,7 +10,7 @@ trait VerifyCardNumber
      * @param  $digits
      * @return bool
      */
-    static public function verifyCardNumber($digits)
+    public static function verifyCardNumber($digits)
     {
        if (strlen($digits) != 16 ||
             intval(substr($digits, 1, 11)) == 0 ||
